@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<center>
+	<h1>Home Page</h1>
+</center>
+<p>WelCome
+
+  <strong></strong>
+  <%= @user.name %>
+</p>
+
+<%= link_to 'Edit Information', edit_user_path(@user) %> |
+<%= link_to 'Log out', login_path %>

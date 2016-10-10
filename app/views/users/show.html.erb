@@ -21,12 +21,24 @@
   <strong></strong>
   <%= @user.name %>
 </p>
+<%= link_to 'tweet now', new_tweet_path %>
+<br>
 
-<%= form_for (@tweet, remote: true) do |f| %>
-  Content: <%= f.text_field :content , params[:content]%><br />
-    <% params[:user_id] %>
-  <%= f.submit %>
-<% end %>
+<% @user_tweets.each do |tweet| %>
+      <tr>
+
+        <td>
+         <% @users.each do |user| %>
+        <% if tweet.user_id == user.id %>
+        <%= user.name %> tweeted : <br>
+        <% end %>
+        <% end %>
+        </td>
+       <td><textarea><%= tweet.content %></textarea></td>
+        <br>
+      </tr>
+    <% end %>
+
 <%= link_to 'Edit Information', edit_user_path(@user) %> |
 <%= link_to 'Log out', login_path %>
 

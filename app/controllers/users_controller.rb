@@ -15,6 +15,8 @@ class UsersController < ApplicationController
   def show
    #@tweet = current_user.tweets.build if signed_in?
     #@feed_items = @user.tweets.paginate(page: params[:page])
+    @users = User.all
+    @user_tweets = @user.tweets
   end
 
   # GET /users/new
@@ -33,7 +35,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to login_url, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -68,9 +70,9 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
+   def set_user
       @user = User.find(params[:id])
-    end
+end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params

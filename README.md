@@ -10,10 +10,10 @@ URL: **Insert your Heroku URL here**
 
 Danh sách chức năng **bắt buộc**:
 
-* [ ] Người dùng được phép đăng nhập bằng tên tài khoản, mật khẩu.
-* [ ] Người dùng có thể đăng trạng thái lên trang cá nhân.
-* [ ] Ở trang home, người dùng có thể xem trạng thái của bạn bè và những người đang được người đó follow. Cần thể hiện đầy đủ thông tin của trạng thái như hình ảnh, avatar,...
-* [ ] Người dùng có thể tìm kiếm người dùng khác
+* [x] Người dùng được phép đăng nhập bằng tên tài khoản, mật khẩu.
+* [x] Người dùng có thể đăng trạng thái lên trang cá nhân.
+* [x] Ở trang home, người dùng có thể xem trạng thái của bạn bè và những người đang được người đó follow. Cần thể hiện đầy đủ thông tin của trạng thái như hình ảnh, avatar,...
+* [x] Người dùng có thể tìm kiếm người dùng khác
 * [ ] Người dùng có thể follow người dùng khác
 * [ ] Người dùng có thể thêm comment vào các bài đăng.
 * [ ] Người dùng có thể đăng nhập bằng Twitter qua OAuth(Sử dụng Omniauth Twitter)

@@ -1,13 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<center>
-	<h1>Home Page</h1>
-</center>
+<nav class="navbar navbar-light bg-faded">
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="btn btn-outline-success" href= "#" >Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-success" href="/users">search users</a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-success" href="#">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-success" href="#">About</a>
+    </li>
+  </ul>
+</nav>
 <p>WelCome
 
   <strong></strong>
   <%= @user.name %>
 </p>
 
+<%= form_for (@tweet, remote: true) do |f| %>
+  Content: <%= f.text_field :content , params[:content]%><br />
+    <% params[:user_id] %>
+  <%= f.submit %>
+<% end %>
 <%= link_to 'Edit Information', edit_user_path(@user) %> |
 <%= link_to 'Log out', login_path %>
+
+

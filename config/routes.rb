@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tweets
   get 'admin/index'
 
   get 'sessions/new'
@@ -7,8 +8,9 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
-  get 'logout' => 'sessions#destroy'
+  post   'tweet'   => 'tweets#create'
 
+  resources :tweets,        only: [:index, :create, :destroy]
   resources :users
   
   get 'admin' => 'admin#index'

@@ -1,0 +1,17 @@
+$(document).on('submit', '#article', function(e) {
+     $.ajax({
+        url: $(this).attr('action'),
+        type: $(this).attr('method'),
+        data: $(this).serialize(),
+        success: function(html) {
+        alert('ok');
+        }
+    });
+    e.preventDefault();
+});
+
+<%= form_for (@tweet, remote: true) do |f| %>
+  Content: <%= f.text_field :content , params[:content]%><br />
+    <% params[:user_id] %>
+  <%= f.submit %>
+<% end %>

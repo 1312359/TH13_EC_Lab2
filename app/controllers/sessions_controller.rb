@@ -11,10 +11,12 @@ class SessionsController < ApplicationController
   		redirect_to user, alert: "User logged in!"
   	else
   		redirect_to login_url,alert:"invalid username or password!"
+  		
   end
 end
 
   def destroy
+  	sign_out
   	sessions[:user_id]= nil
   	redirect_to login_url, alert:"successfully logged out!"
   end

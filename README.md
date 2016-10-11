@@ -1,10 +1,11 @@
-# Homework 1 - *Name of App*
+# Homework 2 - tweet fake
 
-**Name of your app** Trang web cho phép người dùng chia sẻ và cập nhật trạng thái. Due Date: 24:00 11/10/2016
+tweet fake Trang web cho phép người dùng chia sẻ và cập nhật trạng thái. Due Date: 24:00 11/10/2016
 
-Danh sách sinh viên: **Your Name Here**
+Danh sách sinh viên: Lê Quốc Tấn Lộc  1312340 
+                     Đào Chí Minh     1312359
 
-URL: **Insert your Heroku URL here**
+URL: 
 
 ## Chức năng
 
@@ -48,7 +49,7 @@ Quy trình sử dụng [GIT Workflow](https://www.atlassian.com/git/tutorials/co
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](relative-path-to-your-gif-file-on-github)
+![Video Walkthrough](Demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
